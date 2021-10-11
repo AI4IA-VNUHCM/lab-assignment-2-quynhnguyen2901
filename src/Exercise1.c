@@ -19,7 +19,24 @@ int main(int argc, char *argv[]) {
 	float distance = atof(argv[1]);
 	int result;
 	//Your codes here
-	
+	printf("enter your distance: ");
+	scanf("%f", &distance);
+	float paya, payb, payc;
+	paya=(15000*distance)/2;
+	payb=15000+((distance-2)*2000)/0.25;
+	payc= 15000+(28*2000)/0.25+(distance-30)*5000;
+	if (distance<=2 && distance>0){
+		result=paya;
+		printf("you have to pay %f\n ", result);
+	}
+	else if(distance>2 && distance<=30){
+		result=payb;
+		printf("you have to pay %f\n", result);
+	}
+	else{
+		result=payc;
+		printf("you have to pay %f\n", result);
+	}
 	printf("%d", result);
 	return 0;
 }
