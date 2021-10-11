@@ -15,7 +15,16 @@ int main(int argc, char *argv[]) {
 	int testcase = atoi(argv[1]);
 	
 	//Your codes here
-	
-	
+	int testcase;
+	printf("input integer number: ");
+	scanf("%d", &testcase);
+	for(int i=2; i<=testcase; i++){
+		while (testcase%i == 0){
+			printf("%d%s", i," * ");
+			testcase/=i;
+		}
+	}
+	system("pause");
 	return 0;
 }
+ 
